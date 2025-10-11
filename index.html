@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Social Media Usage in Tunisia</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Supabase JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Confetti -->
+  <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🗳️Social Media Usage in Tunisia</h1>
+    <!-- <p>Please answer these questions anonymously. It takes less than 2 minutes!</p> -->
+
+    <form id="feedback-form" aria-labelledby="survey-title">
+      <!-- AGE GROUP -->
+      <fieldset class="question">
+        <legend>1️⃣ Your age group:</legend>
+        <div class="options">
+          <label><input type="radio" name="age" value="Under 18" required> Under 18</label>
+          <label><input type="radio" name="age" value="18-24"> 18-24</label>
+          <label><input type="radio" name="age" value="25-34"> 25-34</label>
+          <label><input type="radio" name="age" value="35-44"> 35-44</label>
+          <label><input type="radio" name="age" value="45+"> 45 and above</label>
+        </div>
+      </fieldset>
+
+      <!-- PLATFORM -->
+      <fieldset class="question">
+        <legend>2️⃣ Which platform do you use the most?</legend>
+        <div class="options">
+          <label><input type="radio" name="platform" value="Facebook" required> Facebook</label>
+          <label><input type="radio" name="platform" value="Instagram"> Instagram</label>
+          <label><input type="radio" name="platform" value="TikTok"> TikTok</label>
+          <label><input type="radio" name="platform" value="YouTube"> YouTube</label>
+          <label><input type="radio" name="platform" value="Other"> Other</label>
+        </div>
+      </fieldset>
+
+      <!-- TIME PER DAY -->
+      <fieldset class="question">
+        <legend>3️⃣ How much time do you spend per day on social media?</legend>
+        <div class="options">
+          <label><input type="radio" name="time_day" value="Less than 1 hour" required> Less than 1 hour</label>
+          <label><input type="radio" name="time_day" value="1-2 hours"> 1-2 hours</label>
+          <label><input type="radio" name="time_day" value="3-5 hours"> 3-5 hours</label>
+          <label><input type="radio" name="time_day" value="More than 5 hours"> More than 5 hours</label>
+        </div>
+      </fieldset>
+
+      <!-- TIME PER WEEK -->
+      <fieldset class="question">
+        <legend>4️⃣ Average time spent per week:</legend>
+        <div class="options">
+          <label><input type="radio" name="time_week" value="Less than 7 hours" required> Less than 7 hours</label>
+          <label><input type="radio" name="time_week" value="7-14 hours"> 7-14 hours</label>
+          <label><input type="radio" name="time_week" value="15-30 hours"> 15-30 hours</label>
+          <label><input type="radio" name="time_week" value="More than 30 hours"> More than 30 hours</label>
+        </div>
+      </fieldset>
+
+      <!-- PURPOSE -->
+      <fieldset class="question">
+        <legend>5️⃣ Main purpose of use:</legend>
+        <div class="options">
+          <label><input type="radio" name="purpose" value="Work" required> Work</label>
+          <label><input type="radio" name="purpose" value="Learn"> Learn</label>
+          <label><input type="radio" name="purpose" value="Entertainment"> Entertainment</label>
+          <label><input type="radio" name="purpose" value="Communicate"> Communicate</label>
+        </div>
+      </fieldset>
+
+      <!-- SATISFACTION -->
+      <fieldset class="question">
+        <legend>6️⃣ Are you satisfied with the content you find on social media?</legend>
+        <div class="options">
+          <label><input type="radio" name="satisfaction" value="Yes" required> Yes</label>
+          <label><input type="radio" name="satisfaction" value="No"> No</label>
+          <label><input type="radio" name="satisfaction" value="Neutral"> Neutral</label>
+        </div>
+      </fieldset>
+
+      <!-- FEEDBACK TEXT -->
+      <fieldset class="question">
+        <legend>7️⃣ Any suggestions or comments?</legend>
+        <textarea name="feedback" rows="3" placeholder="Write your suggestions here (optional)"></textarea>
+      </fieldset>
+
+      <button type="submit">📩 Submit My Answers</button>
+    </form>
+
+    <!-- ✅ Thank You Message -->
+    <div id="thank-you" class="hidden">
+      <h2>✅ Thank you for your time!</h2>
+      <p>Your responses have been successfully recorded.</p>
+    </div>
+
+    <p id="message"></p>
+  </div>
+</body>
+</html>

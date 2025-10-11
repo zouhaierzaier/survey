@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Sondage Réseaux Sociaux</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="Admin.js"></script>
+</head>
+<body>
+  <div class="container admin">
+    <h1>📊 Tableau des Réponses</h1>
+    <p>Visualisez et exportez les réponses du sondage.</p>
+
+    <div class="admin-controls">
+      <button id="refresh">🔄 Actualiser</button>
+      <button id="download">⬇️ Télécharger CSV</button>
+    </div>
+
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Âge</th>
+          <th>Plateforme</th>
+          <th>Temps / Jour</th>
+          <th>Temps / Semaine</th>
+          <th>Objectif</th>
+          <th>Satisfaction</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p id="status"></p>
+  </div>
+</body>
+</html>
