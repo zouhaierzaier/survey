@@ -20,6 +20,8 @@ form.addEventListener("submit", async (e) => {
     purpose: form.elements["purpose"].value,
     satisfaction: form.elements["satisfaction"].value,
     feedback: form.elements["feedback"].value || null,
+    gender:form.elements["Gender"].value,
+    
   };
 
   const { error } = await db.from("survey").insert([data]);
@@ -64,3 +66,4 @@ function launchConfetti() {
     }));
   }, 250);
 }
+
